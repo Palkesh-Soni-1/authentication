@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index copy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script type="module" src="firebaseauth.js"></script>
+</head>
+
+<body>
+    <div class="container" id="signup" style="display:none;">
+        <div class="main1">
+            <div class="header1">
+                <span class="logo1">
+                    <div><span class="lg1"> Logo</span> <br> <b>Chess Tycoon</b></div>
+                </span>
+                <img src="bar-white.png" alt="bar" class="bar1">
+            </div>
+            <div class="mid1">
+
+                <div class="middle1">
+                    <form method="post" action="">
+                        <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+                        <p class="signin1">Sign Up</p>
+                        <div class="inpu1">
+                            <input type="text" id="fName" placeholder="Full Name" class="inp1" required>
+                            <br>
+                            <input type="email" id="rEmail" placeholder="Email" class="inp1" required>
+                            <br>
+                            <input type="text" id="rLichess" placeholder="Lichess ID" class="inp1" required>
+                            <br>
+                            <input type="number" id="rMobile" placeholder="Mobile Number" class="inp1" required>
+                            <br>
+                            <input type="password" id="rPassword" placeholder="Password (atleast of length 6)" class="inp1" required>
+                        </div>
+                        <!-- <div class="check">
+                            <div class="changer">
+                                <input type="checkbox" name="remember" placeholder="Remember me" class="inputcheck"> <span class="reme"> Remember me</span>
+                            </div>
+                            <span class="reme"> <u>Forget Password?</u></span>
+                        </div> -->
+                        <div class="log1">
+
+                            <!-- <div class="login"> -->
+                            <button type="submit" class="logi1" id="submitSignUp">Sign Up</button>
+                            <!-- </div> -->
+
+                            <p class="or1">OR</p>
+                            <button  id="google-login-btn1" class="google1"><b>Log in with Google</b></button>
+                            <p class="signup1"><button type="submit" style="background-color: #2E2D2D; border: none; color: white; font-size: 2vh" id="signInButton">Already have an Account? Sign In</button></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer1">
+                <ul class="social1">
+                    <li><img src="face-removebg-preview.png" class="icon11"></li>
+                    <li><img src="twitter-removebg-preview.png" class="icon21"></li>
+                    <li><img src="instagram-removebg-preview.png" class="icon31"></li>
+                    <li><img src="linkedin.png" class="icon41"></li>
+                </ul>
+                <div class="foot1">
+                    <p>About | Terms & Conditions | Refund Policy | Privacy Policy</p>
+                    <p>Chess Tycoon © 2024 | A Product of Zorway Technologies LLP</p>
+                </div>
+                <!-- <p>Hello</p> -->
+            </div>
+        </div>
+    </div>
+    <div class="container" id="signIn">
+
+        <div class="main">
+            <div class="header">
+                <span class="logo">
+                    <div><span class="lg"> Logo</span> <br> <b>Chess Tycoon</b></div>
+                </span>
+                <img src="bar-white.png" alt="bar" class="bar">
+            </div>
+            <div class="mid">
+
+                <div class="middle">
+                    <form method="post" action="">
+                        <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+                        <p class="signin">Sign in</p>
+                        <div class="inpu">
+                            <input type="email"  placeholder="Email" id="email" class="inp" required>
+                            <br>
+                            <input type="password" 
+                            id="password" placeholder="Password" class="inp" required>
+                        </div>
+                        <div class="check">
+                            <div class="changer">
+                                <input type="checkbox" placeholder="Remember me" class="inputcheck">
+                                <span class="reme"> Remember me</span>
+                            </div>
+                            <span class="reme"> <u>Forget Password?</u></span>
+                        </div>
+                        <div class="log">
+
+                            <!-- <div class="login"> -->
+                            <button type="submit" class="logi" id="submitSignIn">Log In</button>
+                            <!-- </div> -->
+
+                            <p class="or">OR</p>
+                            <button id="google-login-btn" class="google"><b>Log in with Google</b></button>
+                            <p class="signup"><button type="submit" style="background-color: #2E2D2D; border: none; color: white; font-size: 2vh;" id="signUpButton" >New? Sign up-and contest to win!</button></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer">
+                <ul class="social">
+                    <li><img src="face-removebg-preview.png" class="icon1"></li>
+                    <li><img src="twitter-removebg-preview.png" class="icon2"></li>
+                    <li><img src="instagram-removebg-preview.png" class="icon3"></li>
+                    <li><img src="linkedin.png" class="icon4"></li>
+                </ul>
+                <div class="foot">
+                    <p>About | Terms & Conditions | Refund Policy | Privacy Policy</p>
+                    <p>Chess Tycoon © 2024 | A Product of Zorway Technologies LLP</p>
+                </div>
+                <!-- <p>Hello</p> -->
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+<!-- <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyC5z-RWoa7pxkw4AxZwQCBive0a2fKWE4M",
+        authDomain: "authentication-b863b.firebaseapp.com",
+        databaseURL: "https://authentication-b863b-default-rtdb.firebaseio.com",
+        projectId: "authentication-b863b",
+        storageBucket: "authentication-b863b.appspot.com",
+        messagingSenderId: "177022509368",
+        appId: "1:177022509368:web:c0dbfcbe0da06d514161cd"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+</script> -->
+
+</html>
